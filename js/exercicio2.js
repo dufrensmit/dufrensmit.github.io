@@ -14,6 +14,4 @@ function tratadorDeCliqueExercicio2() {
     const segundo = agora.getSeconds();
 
     alert(`Horário: ${hora} ${periodo} : ${minuto}m : ${segundo}s`);
-
-    console.log('adicionar código na função tratadorDeCliqueExercicio2() em ./js/exercicio2.js')
 }
