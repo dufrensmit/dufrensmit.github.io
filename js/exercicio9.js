@@ -1,26 +1,59 @@
 function haOnzeDigitos(cpf) {
     //---- edite aqui para a validação do exercício 9a
-    return false
-}
+    if (cpf.length == 11) {
+        return true
+    }
+    else {
+        return false
+    }
+}   
 
 function todosOsOnzeDigitosSaoNumeros(cpf) {
     //---- edite aqui para a validação do exercício 9b
-    return false
+    return /^\d+$/.test(cpf)
 }
 
 function osOnzeNumerosSaoDiferentes(cpf) {
     //---- edite aqui para a validação do exercício 9c
-    return false
+    for (let i = 1; i < cpf.length; i++) {
+        if (cpf[i] !== cpf[0]) {
+            return true
+        }
+    }
+
+    return false;
 }
 
 function oPrimeiroDigitoVerificadorEhValido(cpf) {
     //---- edite aqui para a validação do exercício 9d
-    return false
+    let soma = 0
+
+    for (let i = 0; i < 9; i++) {
+        soma += Number(cpf[i]) * (10 - i)
+    }
+
+    let digitoVerificador = (soma * 10) % 11
+    if (digitoVerificador === 10) {
+        digitoVerificador = 0
+    }
+
+    return digitoVerificador === Number(cpf[9])
 }
 
 function oSegundoDigitoVerificadorEhValido(cpf) {
     //---- edite aqui para a validação do exercício 9e
-    return false
+    let soma = 0
+
+    for (let i = 0; i < 10; i++) {
+        soma += Number(cpf[i]) * (11 - i)
+    }
+
+    let digitoVerificador = (soma * 10) % 11
+    if (digitoVerificador === 10) {
+        digitoVerificador = 0
+    }
+
+    return digitoVerificador === Number(cpf[10])
 }
 
 
