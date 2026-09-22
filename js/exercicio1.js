@@ -6,7 +6,7 @@ function tratadorDeCliqueExercicio1() {
     console.log("O valor informado é: "+valorComoString)
     console.log("O valor informado é do tipo: "+ typeof valorComoString)
 
-    let valorComoInteiro = undefined //modifique aqui
+    let valorComoInteiro = parseInt(valorComoString)
 
     console.log("O valor como inteiro é: "+valorComoInteiro)
     console.log("O valor como inteiro é do tipo: "+typeof valorComoInteiro)
