@@ -2,6 +2,23 @@ function listarCasos() {
     let todosOsCasos = []
     //--- inclua seu algoritmo aqui ---
 
+    for (let i = 10; i < 100; i++) {
+        let valor_quadratico = i * i
+
+        if (valor_quadratico >= 1000){
+            let string_do_num = valor_quadratico.toString()
+
+            let primeira_parte = string_do_num.slice(0,2)
+            let segunda_parte = string_do_num.slice(2,4)
+
+            let valor_final = (parseInt(primeira_parte) + parseInt(segunda_parte))
+
+            if (valor_final == i) {
+                todosOsCasos.push(i)
+            }
+        }
+    }
+
     
 
     //--- ---
